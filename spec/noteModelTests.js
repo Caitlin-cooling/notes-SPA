@@ -1,6 +1,6 @@
-describe('notes', function() {
+describe('note', function() {
   it('can store notes', function() {
-    var notes = new Notes();
-    new Expect(notes.text).toEqual('My favourite language is JavaScript');
+    var note = new Note('My favourite language is JavaScript');
+    new Expect(note.getText()).toEqual('My favourite language is JavaScript');
   });
 });
