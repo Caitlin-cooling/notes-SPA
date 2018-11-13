@@ -2,7 +2,6 @@
   function NoteList() {
     this.entries = ['My favourite language is JavaScript'];
     this.text = 'Favourite drink: seltzer';
-
   };
 
   exports.NoteList = NoteList;
