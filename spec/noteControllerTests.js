@@ -9,6 +9,6 @@ describe('Note Controller', function() {
     element.id = 'app'
     document.body.appendChild(element)
     noteController.updateText();
-    expect(element.innerHTML).toEqual('<ul><li>favourite drink: seltzer</li></ul>')
+    expect(element.innerHTML).toEqual('<ul><li>favourite drink: sel...</li></ul>')
   })
 })
