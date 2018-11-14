@@ -11,5 +11,5 @@
   exports.NoteController = NoteController;
 })(this);
 
-noteController = new NoteController("Favourite drink: seltzer", NoteList, NoteListView)
-noteController.updateText();
+// noteController = new NoteController("Favourite drink: seltzer", NoteList, NoteListView)
+// noteController.updateText();

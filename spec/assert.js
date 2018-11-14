@@ -16,6 +16,13 @@
         } else {
           console.log(`❌ ${exp} is not equal to ${assertion}`)
         }
+      },
+      isInstanceOf: function(assertion) {
+        if (exp instanceof assertion) {
+          console.log(' ✅')
+        } else {
+          console.log(`❌ ${exp} is not an instance og ${assertion}`)
+        }
       }
     }
   }
