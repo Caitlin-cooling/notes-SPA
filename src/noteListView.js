@@ -7,7 +7,7 @@
   NoteListView.prototype.returnList = function () {
     var htmlString = '<ul>'
     for(var i = 0; i < this.noteList.length; i++) {
-      htmlString += `<li>${this._formatNote(this.noteList[i])}</li>`;
+      htmlString += `<li><div id=${i}>${this._formatNote(this.noteList[i])}</div></li>`;
     };
     htmlString += '</ul>'
     return htmlString
