@@ -9,7 +9,10 @@
   </head>
   <body>
     <div id="app">Hello!</div>
-
     <script src='src/noteController.js'></script>
+    <script type="text/javascript">
+      var controller = new NoteController("favourite drink: seltzer", new NoteList, new NoteListView)
+      controller.updateText();
+    </script>
   </body>
 </html>
