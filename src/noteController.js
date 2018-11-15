@@ -1,13 +1,32 @@
 (function(exports) {
   function NoteController(noteText, noteList, noteListView) {
-    var note = new Note(noteText);
+    this.note = new Note(noteText);
     var noteList = new NoteList;
-    noteList.addNote(note.getText());
+    noteList.addNote(this.note.getText());
     this.noteListView = new NoteListView(noteList.entries);
   };
 
   NoteController.prototype.updateText = function () {
     document.getElementById('app').innerHTML = this.noteListView.returnList();
   };
+
+  NoteController.prototype.renderNote = function () {
+    console.log("1")
+    document.getElementById('app').addEventListener("click", getNote);
+  };
+
+  function getNote() {
+    console.log("2")
+    getID();
+    console.log("4")
+    document.getElementById('app').innerHTML = "Your note!"
+  };
+
+  function getID () {
+    console.log("3")
+    return window.location.hash;
+  };
+
   exports.NoteController = NoteController;
+  exports.getNote = getNote;
 })(this);
