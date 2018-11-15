@@ -27,6 +27,15 @@
     return window.location.hash;
   };
 
+  NoteController.prototype.submitEvent = function () {
+    document.getElementById('submit').addEventListener("click", function(event) {
+      event.preventDefault();
+    });
+  };
+
+  function doSomething() {
+    console.log("hi")
+  }
+
   exports.NoteController = NoteController;
-  exports.getNote = getNote;
 })(this);
