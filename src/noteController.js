@@ -27,15 +27,13 @@
     return window.location.hash;
   };
 
-  NoteController.prototype.submitEvent = function () {
-    document.getElementById('submit').addEventListener("click", function(event) {
-      event.preventDefault();
-    });
-  };
+  var button = document.getElementById('submit')
+  button.addEventListener('click',function(e) {
+    console.log(e);
+    e.preventDefault();
+    console.log(document.getElementById('note_text').value)
+  }, false);
 
-  function doSomething() {
-    console.log("hi")
-  }
 
   exports.NoteController = NoteController;
 })(this);

@@ -8,15 +8,15 @@
     <title>Notes</title>
   </head>
   <body>
+    <form id ="text" action="#/new" method="post">
+      <textarea id="note_text" rows="8" cols="80"></textarea>
+      <input type="submit" id="submit" value="Submit">
+    </form>
     <div id="app">Hello!</div>
     <script src='src/noteController.js'></script>
     <script type="text/javascript">
       var controller = new NoteController("favourite drink: seltzer", new NoteList, new NoteListView)
       controller.updateText();
     </script>
-    <form id ="text" action="/#" method="post">
-      <textarea rows="8" cols="80"></textarea>
-      <input type="submit" id="submit" value="Submit">
-    </form>
   </body>
 </html>
