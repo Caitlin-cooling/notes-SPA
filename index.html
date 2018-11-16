@@ -8,19 +8,22 @@
     <title>Notes</title>
   </head>
   <body>
+    <h1>Notes</h1>
+    <h3>Add a note:</h3>
     <form id ="text" action="#/new" method="post">
       <textarea id="note_text" rows="8" cols="80"></textarea>
       <input type="submit" id="submit" value="Submit">
     </form>
-    <div id="app">Hello!</div>
+    <h3>Your notes:</h3>
+    <div id="app"></div>
     <script src='src/noteController.js'></script>
     <script type="text/javascript">
-      // var note = new Note("favourite drink: seltzer");
-      // var noteList = new NoteList;
-      // noteList.addNote(note);
-      // var noteListView = new NoteListView(noteList);
-      // var controller = new NoteController(noteListView);
-      // controller.updateText();
+      var note = new Note("favourite drink: seltzer");
+      var noteList = new NoteList;
+      noteList.addNote(note.text);
+      var noteListView = new NoteListView(noteList.entries);
+      var controller = new NoteController(noteListView);
+      controller.renderNote();
     </script>
   </body>
 </html>
