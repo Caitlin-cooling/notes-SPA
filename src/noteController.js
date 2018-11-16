@@ -1,9 +1,6 @@
 (function(exports) {
-  function NoteController(noteText, noteList, noteListView) {
-    this.note = new Note(noteText);
-    var noteList = new NoteList;
-    noteList.addNote(this.note.getText());
-    this.noteListView = new NoteListView(noteList.entries);
+  function NoteController(noteListView) {
+    this.noteListView = noteListView;
   };
 
   NoteController.prototype.updateText = function () {
@@ -26,7 +23,7 @@
     console.log("3")
     return window.location.hash;
   };
-
+  
   var button = document.getElementById('submit')
   button.addEventListener('click',function(e) {
     console.log(e);

@@ -5,7 +5,11 @@ describe('Note Controller', function() {
   });
 
   it('can return HTML', function() {
-    var noteController = new NoteController("favourite drink: seltzer", new NoteList, new NoteListView)
+    var note = new Note("favourite drink: seltzer")
+    var noteList = new NoteList
+    noteList.addNote(note.text)
+    var noteListView = new NoteListView(noteList.entries)
+    var noteController = new NoteController(noteListView)
     var element = document.createElement('div')
     element.id = 'app'
     document.body.appendChild(element)
